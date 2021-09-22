@@ -144,13 +144,13 @@ UPDATE accounts ac
 JOIN accounts_customers ac1 on ac.account_id = ac1.account_id
 JOIN customers c on c.customer_id = ac1.customer_id 
 SET balance = balance - 199.99
-WHERE name = 'Jason Smith'
+WHERE ac.account_id = 900001;
 
 UPDATE accounts ac
 JOIN accounts_customers acc on acc.account_id = ac.account_id 
 JOIN customers c on c.customer_id = acc.customer_id 
 SET balance = balance + 199.99
-WHERE name = 'Amanda Smith'
+WHERE ac.account_id = 900003;
 
 # Change Amanda Smith's last name to "Lastname"
 UPDATE customers 
